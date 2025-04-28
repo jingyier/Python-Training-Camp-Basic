@@ -21,7 +21,7 @@ def sum_numbers():
 pass
 
 
-def sum_numbers(n: int) -> int:
+def sum_numbers(n):
     """ 计算1到n的整数和
 
     Args:
