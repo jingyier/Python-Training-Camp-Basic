@@ -6,7 +6,9 @@ import sys
 import os
 
 # 添加exercises目录到Python路径
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(
+    os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+)
 
 # 导入待测试的函数
 from exercises.break_continue import skip_multiples_of_three
@@ -20,4 +22,5 @@ def test_skip_multiples_of_three():
     # 测试边界情况
     assert skip_multiples_of_three(3) == [1, 2]
     assert skip_multiples_of_three(1) == [1]
-    assert skip_multiples_of_three(0) == [] 
+    assert skip_multiples_of_three(0) == []
+

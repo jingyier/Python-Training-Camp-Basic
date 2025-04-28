@@ -6,7 +6,9 @@ import sys
 import os
 
 # 添加exercises目录到Python路径
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(
+    os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+)
 
 # 导入待测试的函数
 from exercises.for_loop import sum_numbers
@@ -20,4 +22,6 @@ def test_sum_numbers():
     assert sum_numbers(100) == 5050  # 等差数列求和公式: n*(n+1)/2
     
     # 测试边界情况
-    assert sum_numbers(0) == 0 
+    assert sum_numbers(0) == 0
+
+
