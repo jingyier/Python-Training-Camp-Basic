@@ -27,6 +27,15 @@ class Student:
         """
         # 请在下方编写代码，完成属性初始化
         pass
+
+class Student:
+    def __init__(self, name, age, grade):
+            self.name = name
+            self.age = age
+            self.grade = grade
+
+    def print_info(self):
+            print(f"姓名：{self.name}，年龄：{self.age}，成绩：{self.grade}")
     
     def print_info(self):
         """
@@ -40,6 +49,14 @@ class Student:
         """
         # 请在下方编写代码，完成打印学生信息的功能
         pass
+
+    def print_info(self):
+        """打印学生信息，格式：姓名: [name], 年龄: [age], 成绩: [grade]"""
+        print(f"姓名: {self.name}, 年龄: {self.age}, 成绩: {self.grade}")
+
+    def is_passing(self):
+        """判断学生是否通过考试（成绩≥60为通过）"""
+        return self.grade >= 60
     
     def is_passing(self):
         """
@@ -55,6 +72,17 @@ class Student:
         pass
 
 
+class Student:
+    def __init__(self, name, age, grade):
+        self.name = name
+        self.age = age
+        self.grade = grade
+
+    def print_info(self):
+        print(f"姓名: {self.name}, 年龄: {self.age}, 成绩: {self.grade}")
+
+    def is_passing(self):
+        return self.grade >= 60
 def create_student_example():
     """
     创建一个Student类的实例并调用方法
@@ -66,4 +94,11 @@ def create_student_example():
     # 创建一个Student对象，设置姓名为"张三"，年龄为18，成绩为85
     # 调用print_info()方法打印学生信息
     # 返回创建的Student对象
-    pass 
+    pass
+def create_student_example():
+    # 创建Student对象
+    student = Student("张三", 18, 85)
+    # 调用方法打印信息
+    student.print_info()
+    # 返回创建的对象
+    return student

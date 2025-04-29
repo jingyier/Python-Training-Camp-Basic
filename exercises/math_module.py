@@ -18,4 +18,8 @@ def calculate_square_root(number):
     - 数字的平方根
     """
     # 请在下方编写代码
-    pass 
+    pass
+import math
+
+def calculate_square_root(number):
+    return math.sqrt(number)

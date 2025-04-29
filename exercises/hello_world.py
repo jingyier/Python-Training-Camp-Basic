@@ -14,3 +14,5 @@ def print_hello_world():
     用于学习print函数的基本使用
     """
     pass
+def print_hello_world():
+    print("Hello, World!")

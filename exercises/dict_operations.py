@@ -20,4 +20,37 @@ def student_dict_operations(students_dict, operation, *args):
     - 根据操作返回不同结果
     """
     # 请在下方编写代码
-    pass 
+    pass
+def student_dict_operations(students_dict, operation, *args):
+    if operation not in ('add', 'remove', 'update', 'get'):
+        raise ValueError(f"Invalid operation: {operation}")
+
+    if operation == 'add':
+        if len(args) != 2:
+            raise ValueError("Add operation requires two arguments: name and score")
+        name, score = args
+        if name in students_dict:
+            raise KeyError(f"Student {name} already exists")
+        students_dict[name] = score
+        return students_dict
+    elif operation == 'remove':
+        if len(args) != 1:
+            raise ValueError("Remove operation requires one argument: name")
+        name = args[0]
+        if name not in students_dict:
+            raise KeyError(f"Student {name} does not exist")
+        del students_dict[name]
+        return students_dict
+    elif operation == 'update':
+        if len(args) != 2:
+            raise ValueError("Update operation requires two arguments: name and new score")
+        name, new_score = args
+        if name not in students_dict:
+            raise KeyError(f"Student {name} does not exist")
+        students_dict[name] = new_score
+        return students_dict
+    elif operation == 'get':
+        if len(args) != 1:
+            raise ValueError("Get operation requires one argument: name")
+        name = args[0]
+        return students_dict.get(name)
